@@ -1,0 +1,39 @@
+body{
+    font-family: Arial;
+}
+.todolistGrid,.toDo-input-Grid{
+   display: grid;
+   grid-template-columns: 200px 150px 100px;
+   column-gap: 10px;
+   row-gap: 10px;
+   align-items: center;
+   
+}
+.toDo-input-Grid{
+    margin-bottom: 10px;
+    align-items: stretch;
+}
+
+.inputStyle, .duedateStyle{
+    font-size: 15px;
+    padding: 8px;
+}
+
+/*button styling*/
+
+.addButton{
+    background-color: rgb(64, 176, 17);
+    color: white;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-color: beige;
+
+}
+
+.delButton{
+    background-color: rgb(154, 12, 12);
+    color: white;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-color: beige;
+}
