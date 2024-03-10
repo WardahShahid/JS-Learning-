@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Projects</title>
+</head>
+<body>
+    <p>YouTube Subscribe Button</p>
+
+    <button  onclick="
+    Subscribe(); " class="Js-Subscribe-button">
+
+    Subscribe
+    </button>
+
+
+    <p>Amazon Shipping Calculator<br>
+    Orders under $40 = + $10 Shipping<br>
+    Orders over $40 = Free Shipping
+</p>
+<input placeholder="Cost of order" class="Js-input" onkeydown="
+handleInputKey(event);
+">
+
+
+<button onclick="
+calculateTotal();
+">
+Calculate
+</button>
+<p class="Js-Total"> </p>
+</p>
+<input placeholder="Cost of order" class="Js-input" onkeyup="
+handleInputKey(event);
+">
+
+    <script>
+String(25)
+console.log('25'-5);
+console.log('25'+5);
+/*for converting into a string*/
+/*Properties of string
+1.It automatically converts the Number string like"25" into number for math function of -/* .
+2.It doesn't perform + for the same case. Instead it comines the string and the number as converting the number also in string type*/
+
+
+function handleInputKey(event) {
+if(event.key=== 'Enter'){
+    calculateTotal();
+}
+}
+
+function calculateTotal() {
+const inputElement = document.querySelector('.Js-input');
+let Cost = Number(inputElement.value);
+
+if(Cost < 40){
+    Cost = Cost + 10;
+}
+document.querySelector('.Js-Total')
+.innerHTML= `$${Cost}`;
+}
+
+function Subscribe() {
+    console.log('Button clicked');
+
+    const ButtonInfo = document.querySelector('.Js-Subscribe-button');
+    if (ButtonInfo.innerText==='Subscribe'){
+    ButtonInfo.innerHTML = 'Subscribed' ;
+    }else {
+    ButtonInfo.innerHTML = 'Subscribe' ;
+
+    }
+}
+    </script>
+</body>
+</html>
